@@ -80,7 +80,7 @@ the math didn’t match the behavior in the actual **`roll.py`** script.
 
 This pushed me toward investigating the seeds directly.
 
-I noticed in the script that you could specify a seed using the argument **`--seed`**. This meant reproducibility was possible—and guessing or brute‑forcing the correct seed might reveal the flag. I wrote a Python script to iterate through seeds **1–10,000**, checking the output for the keyword **'flare'**.
+I noticed in the script that you could specify a seed using the argument **`--seed`**. This meant reproducibility was possible with guessing or brute‑forcing the correct seed might reveal the flag. I wrote a Python script to iterate through seeds **1–10,000**, checking the output for the keyword **'flare'**.
 
 At first, I tested single‑dice rolls. But revisiting the chat logs, I noticed that the participants specifically used **disadvantage**, which meant multiple dice were rolled. Returning to **`roll.py`**, I confirmed the expected flag path was likely hidden behind **`--dis`** argument to simulate multiple dice being rolled at the same time. 
 
@@ -125,7 +125,7 @@ By morning, I had nothing but noise. No correct flag. No clear path forward. At 
 
 After a disappointing night of false positives, I started fresh in the morning. While reviewing everything again, it suddenly occurred to me that I never checked the actual git log history. This was a major oof moment. 
 
-Working with my counterpart Lothos, we cloned the git repo locally and dug into the commit history. We quickly discovered that the **Git repository itself contained hidden artifacts** left behind in previous commits that nevre appeared in the working tree. 
+Working with my counterpart Lothos, we cloned the git repo locally and dug into the commit history. We quickly discovered that the **Git repository itself contained hidden artifacts** left behind in previous commits that never appeared in the working tree. 
 
 Commands used:
 
