@@ -18,7 +18,7 @@ With that, please enjoy my write-up.
 Begin Your Journey: <https://github.com/swordnshield>  
 Flag format: `flare{....}`
 
-<img src="/.../assets/images/overview_github.jpg" alt="DeadBeef site" class="responsive-img">
+<img src="/assets/images/overview_github.jpg" alt="github site" class="responsive-img">
 
 ---
 
@@ -132,7 +132,7 @@ Commands used:
 > git log
 > git log -p
 
-<img src="/.../assets/images/gitlog.jpg" alt="Git Log" class="responsive-img">
+<img src="/assets/images/gitlog.jpg" alt="Git Log" class="responsive-img">
 
 There was a commit by a user whose domain was an actual site. 
 
@@ -147,7 +147,7 @@ Disallow: /sealed-chamber-deadbeef.html
 
 Routing to the site that was listed as disallowed, it presented another page that only had an image of a d20 and a quote stating that "A picture is worth 1,000 words."
 
-<img src="/.../assets/images/deadbeef.jpg" alt="DeadBeef site" class="medium-responsive-img">
+<img src="/assets/images/deadbeef.jpg" alt="DeadBeef site" class="medium-responsive-img">
 
 Remembering that the original github repository also starred a ExifTool repo, I ran ExifTool on the d20 image which revealed the flag under the attribute **User Comment**
 
