@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CTF:1 Knights of the Stolen Session
+title: CTF 1: Knights of the Stolen Session
 ctf: Flare.io
 date: 2025-11-25
 tags: 
