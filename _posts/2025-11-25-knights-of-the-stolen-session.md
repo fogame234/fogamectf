@@ -18,7 +18,7 @@ With that, please enjoy my write-up.
 Begin Your Journey: <https://github.com/swordnshield>  
 Flag format: `flare{....}`
 
-<img src="/assets/images/overview_github.jpg" alt="github site" class="responsive-img">
+<img src="/assets/images/overview_github.JPG" alt="github site" class="responsive-img">
 
 ---
 
