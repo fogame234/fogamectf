@@ -6,25 +6,28 @@ title: Write-ups
     <div class="post">
         <h1 class="heading-color">Capture the flag challenges</h1>
         <h3>Click on the CTF name to see all completed challenges. </h3>
-        
-        {% assign currentctf = '' %}  <!-- Initialize the ctf variable -->
-        
-        {% for post in site.posts %}
+
+        {% assign currentctf = '' %} <!-- Initialize the ctf variable -->
+
+        <!-- Sort posts by date in ascending order -->
+        {% assign sorted_posts = site.posts | sort: 'date' %}
+        {% for post in sorted_posts %}
             {% capture post_ctf %}{{ post.ctf }}{% endcapture %}
-            
+
             {% if post_ctf != currentctf %}
                 {% unless forloop.first %}</ul>{% endunless %}
                 <!-- Hidden checkbox to control the visibility -->
                 <input type="checkbox" id="toggle-{{ post_ctf }}" class="toggle-checkbox">
-                
+
                 <!-- Label that acts as a clickable header -->
                 <label class="collapsible-label" for="toggle-{{ post_ctf }}">{{ post_ctf }}</label>
-                
+
                 <ul class="collapsible-content" id="{{ post_ctf }}">
                     {% capture currentctf %}{{ post_ctf }}{% endcapture %}
-                {% endif %}
-                
-                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+            {% endif %}
+
+            <!-- List each post's title with a link -->
+            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
         {% endfor %}
     </div>
 </div>
