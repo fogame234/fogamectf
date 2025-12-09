@@ -26,7 +26,7 @@ Show your stats: <https://jimmyswebspace.net/>
 
 Upon first visiting the site I was presented with a character sheet for Sir Alaric. The respec button is disabled. 
 
-<img src="/assets/images/initialstats.JPG" alt="Inital Stats" >
+<img src="/assets/images/initialstats.jpg" alt="Inital Stats" >
 
 Wanting to start off on the right foot, I checked the standard /robots.txt to see if there was anything. Alas I came up empty handed. Was hoping for a quick win but was easily defeated. 
 
@@ -72,4 +72,4 @@ The above script does a few things.
 ```
 Once the script was ready, I fired up developer tools withing the browser and ran the script within the console. Upon script completion I refreshed the page and it presented me with the flag
 
-<img src="/assets/images/statsflag.JPG" alt="Stats Flag" >
+<img src="/assets/images/statsflag.jpg" alt="Stats Flag" >
