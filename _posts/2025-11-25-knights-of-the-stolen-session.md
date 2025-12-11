@@ -147,7 +147,7 @@ Disallow: /sealed-chamber-deadbeef.html
 
 Routing to the site that was listed as disallowed, it presented another page that only had an image of a d20 and a quote stating that "A picture is worth 1,000 words."
 
-<img src="/assets/images/deadbeef.jpg" alt="DeadBeef site" class="medium-responsive-img">
+<img src="/assets/images/deadbeef.jpg" alt="DeadBeef site" class="large-responsive-img">
 
 Remembering that the original github repository also starred a ExifTool repo, I ran ExifTool on the d20 image which revealed the flag under the attribute **User Comment**
 

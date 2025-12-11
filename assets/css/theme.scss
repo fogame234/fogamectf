@@ -515,8 +515,18 @@ table.inner-borders {
 }
 
 /* Apply specific resizing to the image with class 'responsive-img' */
-.medium-responsive-img {
+.large-responsive-img {
     max-width: 200%; /* Prevents the image from exceeding the width of its container */
+    height: auto; /* Keeps the image's aspect ratio intact */
+    max-height: 400px; /* Optional: Limits maximum height to 200px */
+    display: block;         /* Makes the image a block element */
+    margin-left: auto;      /* Auto margin on the left side */
+    margin-right: auto;     /* Auto margin on the right side */
+}
+
+/* Apply specific resizing to the image with class 'responsive-img' */
+.medium-responsive-img {
+    max-width: 150%; /* Prevents the image from exceeding the width of its container */
     height: auto; /* Keeps the image's aspect ratio intact */
     max-height: 400px; /* Optional: Limits maximum height to 200px */
     display: block;         /* Makes the image a block element */
