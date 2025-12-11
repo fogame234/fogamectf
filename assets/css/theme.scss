@@ -518,7 +518,7 @@ table.inner-borders {
 .large-responsive-img {
     max-width: 200%; /* Prevents the image from exceeding the width of its container */
     height: auto; /* Keeps the image's aspect ratio intact */
-    max-height: 400px; /* Optional: Limits maximum height to 200px */
+    max-height: 400px; /* Optional: Limits maximum height to 400px */
     display: block;         /* Makes the image a block element */
     margin-left: auto;      /* Auto margin on the left side */
     margin-right: auto;     /* Auto margin on the right side */
@@ -528,7 +528,7 @@ table.inner-borders {
 .medium-responsive-img {
     max-width: 150%; /* Prevents the image from exceeding the width of its container */
     height: auto; /* Keeps the image's aspect ratio intact */
-    max-height: 400px; /* Optional: Limits maximum height to 200px */
+    max-height: 300px; /* Optional: Limits maximum height to 300px */
     display: block;         /* Makes the image a block element */
     margin-left: auto;      /* Auto margin on the left side */
     margin-right: auto;     /* Auto margin on the right side */
