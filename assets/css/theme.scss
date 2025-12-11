@@ -544,52 +544,47 @@ table.inner-borders {
 /*********************************************************
                     Code Styling
 *********************************************************/
-/* General code block styles */
+
+/* Styling for code blocks using span tags to wrap text up to 15 lines and show a vertical scrollbar */
 .code-block {
     display: block;                /* Ensures it behaves like a block-level element */
     max-height: calc(1.4em * 15);   /* Limit height to approximately 15 lines */
     overflow-y: auto;              /* Vertical scrollbar if content exceeds max height */
     overflow-x: auto;              /* Horizontal scrollbar for long lines */
     background-color: #282c34;     /* Light background color for the code block */
-    padding: 5px;                  /* Padding around the code block */
+    padding: 5px;             /* Padding around the code block */
     border-radius: 4px;            /* Rounded corners */
     font-family: 'Courier New', Courier, monospace; /* Monospace font */
     font-size: 14px;               /* Font size */
     line-height: 1.4;              /* Line height for code readability */
     white-space: pre-wrap;         /* Ensures that long code lines wrap */
     word-wrap: break-word;         /* Break long words that don't fit */
-    box-sizing: border-box;        /* Includes padding in width calculation */
+
 }
 
-/* Code block wrapper */
 .code-block-wrapper {
-    display: block;
-    margin: 0 auto;
-    width: 80%;                    /* Adjust width to 80% */
-    box-sizing: border-box;        /* Ensure padding doesn't affect width */
+    display: block;                /* Treat <span> as a block element to support wrapping */
+    margin: 0 auto; 
+    width: 80%;
 }
 
-/* Smaller code block */
 .code-block-smaller {
     display: block;                /* Ensures it behaves like a block-level element */
     max-height: calc(1.4em * 15);   /* Limit height to approximately 15 lines */
     overflow-y: auto;              /* Vertical scrollbar if content exceeds max height */
     overflow-x: auto;              /* Horizontal scrollbar for long lines */
     background-color: #282c34;     /* Light background color for the code block */
-    padding: 3px;                  /* Padding around the code block */
+    padding: 3px;             /* Padding around the code block */
     border-radius: 4px;            /* Rounded corners */
     font-family: 'Courier New', Courier, monospace; /* Monospace font */
     font-size: 14px;               /* Font size */
     line-height: 1.4;              /* Line height for code readability */
-    white-space: pre-wrap;         /* Ensures that long code lines wrap */
     word-wrap: break-word;         /* Break long words that don't fit */
-    box-sizing: border-box;        /* Includes padding in width calculation */
+
 }
 
-/* Smaller code block wrapper */
 .code-block-wrapper-smaller {
-    display: block;
-    margin: 0 auto;
-    width: 100%;                   /* Set width to 100% for smaller blocks */
-    box-sizing: border-box;        /* Include padding in width calculation */
+    display: block;                /* Treat <span> as a block element to support wrapping */
+    margin: 0 auto; 
+    width: 100%;
 }
