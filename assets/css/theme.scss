@@ -552,21 +552,20 @@ table.inner-borders {
     overflow-y: auto;              /* Vertical scrollbar if content exceeds max height */
     overflow-x: auto;              /* Horizontal scrollbar for long lines */
     background-color: #282c34;     /* Light background color for the code block */
-    padding-right: 5px;
-    padding-top: 0px;
-    padding-left: 5px;                 /* Padding around the code block */
+    padding: 5px;             /* Padding around the code block */
     border-radius: 4px;            /* Rounded corners */
     font-family: 'Courier New', Courier, monospace; /* Monospace font */
     font-size: 14px;               /* Font size */
     line-height: 1.4;              /* Line height for code readability */
     white-space: pre-wrap;         /* Ensures that long code lines wrap */
     word-wrap: break-word;         /* Break long words that don't fit */
+
 }
 
 .code-block-wrapper {
     display: block;                /* Treat <span> as a block element to support wrapping */
-    padding-top: 0px;
-
+    margin: 0 auto; 
+    width: 80%;
 }
 
 .code-block-smaller {
@@ -575,7 +574,7 @@ table.inner-borders {
     overflow-y: auto;              /* Vertical scrollbar if content exceeds max height */
     overflow-x: auto;              /* Horizontal scrollbar for long lines */
     background-color: #282c34;     /* Light background color for the code block */
-    padding: 5px;             /* Padding around the code block */
+    padding: 3px;             /* Padding around the code block */
     border-radius: 4px;            /* Rounded corners */
     font-family: 'Courier New', Courier, monospace; /* Monospace font */
     font-size: 14px;               /* Font size */
@@ -588,5 +587,5 @@ table.inner-borders {
 .code-block-wrapper-smaller {
     display: block;                /* Treat <span> as a block element to support wrapping */
     margin: 0 auto; 
-    width: 80%;
+    width: 100%;
 }
