@@ -12,30 +12,30 @@ tags:
  - Writeup
 ---
 
-Write up for Flare’s CTF week 3 of 6
+Write-up for Flare’s CTF week 3 of 6
 
 Main URL: [https://techno-plaza-2000.com/](https://techno-plaza-2000.com/)
 
 ## <span class="heading-color">Overview</span> ##
-Let me say that this CTF was challenging enough to hurt my brain. It was like an Ogre. As <span style="color: green;">Shrek</span> once said "Ogre's are like onions". Although onions make you cry, just like this CTF did, they tend to have multiple layers to them. Within those layers holds the sweet goodness that makes the onion wonderful to partake of. 
+Let me say that this CTF was challenging enough to hurt my brain. It was like an ogre. As <span style="color: green;">Shrek</span> once said "Ogres are like onions". Although onions make you cry, just like this CTF did, they tend to have multiple layers to them. Within those layers hold the sweet goodness that makes the onion wonderful to partake of. 
 
 Main URL: [https://techno-plaza-2000.com/](https://techno-plaza-2000.com/)
 
 ---
 
-## <span class="heading-color">Inital Recon:</span> ##
+## <span class="heading-color">Initial Recon:</span> ##
 
-When first visiting the site, you are presented with a 4Chan style board. Multiple discussion boards but not much going on. First thing I do is look at the /robots.txt but that turns up nothing as the file cannot be found. Jumping into the HTML code I notice that there are multiple boards that are referenced with in the latest posts table. 
+When I first visitinvisted the site, you are presented with a 4Chan style board. Multiple discussion boards but not much going on. First thing I do is look at the /robots.txt, but that turns up nothing as the file cannot be found. Jumping into the HTML code I notice that there are multiple boards that are referenced within the latest posts table. 
 
 Chat board URLs: `/b`, `/g`, `/hack`, `/i`, `/x`
 
-Looking further through the code I also notice a `b.php` file that looked promising. With that I set off on reviewing the chat board urls and the random b.php file. 
+Looking further through the code I also noticed a `b.php` file that looked promising. With that, I set off on reviewing the chat board urls and the random b.php file. 
 
 ## <span class="heading-color">How far does the swamp go, Donkey?</span> ##
 
-The swamp went deep on this one. I got sent on a second quest with one of the images as there was a CTF within a CTF. 
+The swamp went deep on this one. I was sent on a side quest with one of the images as there was a CTF within a CTF. 
 
-Starting with the b.php file I found, it routed me to a `door.png` image that I thought I would need to unlock. Downloading the image I ran it through EXIFTools, [Aperisolve](https://www.aperisolve.com/), and a few other tools to see if there was anything with the image. The image came up short. Refreshing the page, b.php gave me another image. Wondering how many images it would give, I refreshed it multiple times and saw that one of the images was called `whyareyoureadingthislol.png`. Realizing I had been lead down the wrong path, I jumped back into the chat board channels. 
+Starting with the b.php file I found, it routed me to a `door.png` image that I thought I would need to unlock. Downloading the image I ran it through EXIFTools, [Aperisolve](https://www.aperisolve.com/), and a few other tools to see if there was anything with the image. The image came up empty. Refreshing the page, b.php gave me another image. Wondering how many images it would give, I refreshed it multiple times and saw that one of the images was called `whyareyoureadingthislol.png`. Realizing I had been led down the wrong path, I jumped back into the chat board channels. 
 
 Reviewing the chat board URLs I had found, I jumped into /hack immediately and began poking around. As this CTF seemed to be about layers I was looking for something that possibly could have layers within it. On page 2 of /hack, I did find a QR code imae image that looked suspicous.
 
@@ -60,9 +60,9 @@ Looking back over the chat boards I found my way to `/x`, reviewing the board I 
 
 <img src="/assets/images/trailhead.png" alt="Trailhead" class="large-responsive-img" >
 
-Cliccking on the image proovidedd a bigger sized version and I saved that to my computer. Running it through Aperisolve didn't produce any results. Thinking I had hit another dead end I noticed in `/x` there were two names on the image. One was `1764792147756.png` and the other was `trailhead.png`. The file that I had downloaded was the one with all numbers. I clicked on the link for `trailhead.png`and did the same process I did in Aperisolve. Things were starting to take shape as there was stuff on this image. 
+Clicking on the image provided a bigger sized version and I saved that to my computer. Running it through Aperisolve didn't produce any results. Thinking I had hit another dead end I noticed that in `/x` there were two names on the image. One was `1764792147756.png` and the other was `trailhead.png`. The file that I had downloaded was the one with all numbers. I clicked on the link for `trailhead.png`and did the same process I used previously while reviewing doors.png. Things were starting to take shape as there was something on this image. 
 
-First thing I noticed was a superimposed image within the image. Nothing of note there but it was funny to see. 
+First thing I noticed was a superimposed image within the image. Nothing of note there, but it was funny to see. 
 
 <img src="/assets/images/superimposed_bit_2.png" alt="Super Imposed" class="large-responsive-img" >
 
@@ -70,7 +70,7 @@ EXIFtool gave back normal data, except the file size seemed abnormally large for
 
 <img src="/assets/images/metadatamp3.jpg" alt="Hidden metadata.mp3 string" class="large-responsive-img" >
 
-Finally cooking with some gas, I determined that trailhead.png was a nested folder. Changing the extension to .zip and then extracting it gave me the actual mp3 file. Running it I was presented with a video of Nyan Cat. Only issue is, what the heck does Nyan Cat have to do with layers. 
+Finally, cooking with some gas, I determined that trailhead.png was a nested folder. Changing the extension to .zip and then extracting it gave me the actual mp3 file. Running it I was presented with a video of Nyan Cat. Only issue is, what the heck does Nyan Cat have to do with layers. 
 
 <img src="/assets/images/nyancat.jpg" alt="Hidden metadata.mp3 string" class="large-responsive-img" >
 
@@ -125,7 +125,7 @@ Command:
    
     cat > blob.b64 <<EOF {base64-encoded data} EOF
 
-What this does it is takes the data, creates a .b64 file, and sets the end of file (EOF) tags. This allows me to have a file that I can decode against
+The script takes the data, creates a .b64 file, and sets the end of file (EOF) tags. This allows me to have a file that I can decode against
 
 <img src="/assets/images/catb64.jpg" alt="Cat Base64 file" class="large-responsive-img" >
 
