@@ -540,3 +540,53 @@ table.inner-borders {
     flex-shrink: 0;          /* Prevent items from shrinking */
     margin-bottom: 20px;     /* Space between items in case of wrapping */
 }
+
+/*********************************************************
+                    Code Styling
+*********************************************************/
+
+/* Styling for code blocks using span tags to wrap text up to 15 lines and show a vertical scrollbar */
+.code-block {
+    display: block;                /* Ensures it behaves like a block-level element */
+    max-height: calc(1.4em * 15);   /* Limit height to approximately 15 lines */
+    overflow-y: auto;              /* Vertical scrollbar if content exceeds max height */
+    overflow-x: auto;              /* Horizontal scrollbar for long lines */
+    background-color: #282c34;     /* Light background color for the code block */
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-left: 5px;                 /* Padding around the code block */
+    border-radius: 4px;            /* Rounded corners */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    font-size: 14px;               /* Font size */
+    line-height: 1.4;              /* Line height for code readability */
+    white-space: pre-wrap;         /* Ensures that long code lines wrap */
+    word-wrap: break-word;         /* Break long words that don't fit */
+}
+
+.code-block-wrapper {
+    display: block;                /* Treat <span> as a block element to support wrapping */
+    padding-top: 0px;
+
+}
+
+.code-block-smaller {
+    display: block;                /* Ensures it behaves like a block-level element */
+    max-height: calc(1.4em * 15);   /* Limit height to approximately 15 lines */
+    overflow-y: auto;              /* Vertical scrollbar if content exceeds max height */
+    overflow-x: auto;              /* Horizontal scrollbar for long lines */
+    background-color: #282c34;     /* Light background color for the code block */
+    padding: 5px;             /* Padding around the code block */
+    border-radius: 4px;            /* Rounded corners */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    font-size: 14px;               /* Font size */
+    line-height: 1.4;              /* Line height for code readability */
+    white-space: pre-wrap;         /* Ensures that long code lines wrap */
+    word-wrap: break-word;         /* Break long words that don't fit */
+
+}
+
+.code-block-wrapper-smaller {
+    display: block;                /* Treat <span> as a block element to support wrapping */
+    margin: 0 auto; 
+    width: 80%;
+}
