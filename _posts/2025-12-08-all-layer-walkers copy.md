@@ -14,12 +14,12 @@ tags:
 
 Write-up for Flare’s CTF week 3 of 6
 
-Main URL: [https://techno-plaza-2000.com/](https://techno-plaza-2000.com/)
-
 ## <span class="heading-color">Overview</span> ##
 Let me say that this CTF was challenging enough to hurt my brain. It was like an ogre. As <span style="color: green;">Shrek</span> once said "Ogres are like onions". Although onions make you cry, just like this CTF did, they tend to have multiple layers to them. Within those layers hold the sweet goodness that makes the onion wonderful to partake of. 
 
 Main URL: [https://techno-plaza-2000.com/](https://techno-plaza-2000.com/)
+
+<img src="/assets/images/CTF3/4chanboard.JPG" alt="Inital Stats" class="large-responsive-img" >
 
 ---
 
@@ -41,12 +41,12 @@ Reviewing the chat board URLs I had found, I jumped into /hack immediately and b
 
 Note: `This image seems to have been removed from the chat board. However, I still had a copy.`
 
-<img src="/assets/images/huntressqrcode.png" alt="Inital Stats" class="large-responsive-img" >
+<img src="/assets/images/CTF3/huntressqrcode.png" alt="Inital Stats" class="large-responsive-img" >
 
 
 Taking the QR code and running it through [https://scanqr.org/](https://scanqr.org/) I was presented with the below ASCII code:
 
-<img src="/assets/images/qrinception.jpg" alt="Inital Stats" class="large-responsive-img" >
+<img src="/assets/images/CTF3/qrinception.jpg" alt="Inital Stats" class="large-responsive-img" >
 
 The ASCII code looked alot like qr code. Figured I'd scanng it and see where it went. After scanning it, I was presented with a flag `flag{e1487f138f885bfef64f07cdeac96908}`. Thinking that this was a super easy flag to get I submitted it only to be left with utter dispare. It did not work. I went back through the html code of /hack, rescanned the QR code, tried to invert the colors of the ASCII QR code, all to be left with nothing. I then realized that the flag was in the wrong format. Flare's flags are in the format of `flare{...}`, this one was in the format of `flag{...}`. Wondering if it was another flag I dropped it into my search engine of choice. The first hit pointed me to a [Huntress CTF challenge for 2025](https://cdenton1.github.io/2025/11/01/Huntress-CTF-2025.html) blog. The write gives an excellent writeup of all the flags that Huntress put out, but the flag I was concerned with was under the heading QRception. 
 
@@ -58,21 +58,21 @@ Note: This took up about 1.5-2 hours of my time. My brain felt like it was walki
 
 Looking back over the chat boards I found my way to `/x`, reviewing the board I saw an image that was looking for individuals to find the hidden message with a picture of a nesting doll on it. Figuring nesting dolls usually have layers, I decided to give it a go. 
 
-<img src="/assets/images/trailhead.png" alt="Trailhead" class="large-responsive-img" >
+<img src="/assets/images/CTF3/trailhead.png" alt="Trailhead" class="large-responsive-img" >
 
 Clicking on the image provided a bigger sized version and I saved that to my computer. Running it through Aperisolve didn't produce any results. Thinking I had hit another dead end I noticed that in `/x` there were two names on the image. One was `1764792147756.png` and the other was `trailhead.png`. The file that I had downloaded was the one with all numbers. I clicked on the link for `trailhead.png`and did the same process I used previously while reviewing doors.png. Things were starting to take shape as there was something on this image. 
 
 First thing I noticed was a superimposed image within the image. Nothing of note there, but it was funny to see. 
 
-<img src="/assets/images/superimposed_bit_2.png" alt="Super Imposed" class="large-responsive-img" >
+<img src="/assets/images/CTF3/superimposed_bit_2.png" alt="Super Imposed" class="large-responsive-img" >
 
 EXIFtool gave back normal data, except the file size seemed abnormally large for a .png file. What struck gold was that the Foremost section had found additional data. There was something called `metadata.mp3` hidden within the file. Verifying the Strings section, it was present there as well.
 
-<img src="/assets/images/metadatamp3.jpg" alt="Hidden metadata.mp3 string" class="large-responsive-img" >
+<img src="/assets/images/CTF3/metadatamp3.jpg" alt="Hidden metadata.mp3 string" class="large-responsive-img" >
 
 Finally, cooking with some gas, I determined that trailhead.png was a nested folder. Changing the extension to .zip and then extracting it gave me the actual mp3 file. Running it I was presented with a video of Nyan Cat. Only issue is, what the heck does Nyan Cat have to do with layers. 
 
-<img src="/assets/images/nyancat.jpg" alt="Hidden metadata.mp3 string" class="large-responsive-img" >
+<img src="/assets/images/CTF3/nyancat.jpg" alt="Hidden metadata.mp3 string" class="large-responsive-img" >
 
 Seeing that the mp3 file didn't have anything to give while playing it I used EXIFtool to see if there was any metadata that would be worth grabbing. Outside of the mp3 being classified as Death Metal, the only other thing of importance is the comment. Within the comment field there is binary code. 
 
@@ -127,7 +127,7 @@ Command:
 
 The script takes the data, creates a .b64 file, and sets the end of file (EOF) tags. This allows me to have a file that I can decode against
 
-<img src="/assets/images/catb64.jpg" alt="Cat Base64 file" class="large-responsive-img" >
+<img src="/assets/images/CTF3/catb64.jpg" alt="Cat Base64 file" class="large-responsive-img" >
 
 Once the file is created I can use the terminal to decode it and set the output to a payload.xz
 
@@ -157,5 +157,5 @@ Inspected the contents of the binary file that was present
 
 Locate the flag `Flare{n3sted_thr34d1ng_1337}`
 
-<img src="/assets/images/finalsteps.jpg" alt="Final Steps" class="medium-responsive-img" >
+<img src="/assets/images/CTF3/finalsteps.jpg" alt="Final Steps" class="medium-responsive-img" >
 
