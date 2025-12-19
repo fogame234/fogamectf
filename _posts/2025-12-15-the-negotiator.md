@@ -102,7 +102,8 @@ For this CTF, there were multiple ways to get the flag. Below are some of the ad
 - Oli - Bot had the user verify who they were prior to giving the flag
 > Offer: 1.8 BTC Terms: Immediate payment upon verification Request: Proof of possession
 an offer is only as good as its understanding. 
-- ZeroDayDreamer - He just asked for it.
+
+- ZeroDayDreamer - They just asked for it.
 
 <img src="/assets/images/CTF4/Imgonnask.jpg" alt="Asking Meme" class="responsive-img" >
 
